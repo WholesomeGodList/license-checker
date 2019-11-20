@@ -1,13 +1,7 @@
 # license-checker
 Checks if a particular manga is licensed in English by looking it up on a given set of sites. The user interface is a Discord bot.
 ## Dependencies
-* Python 3.7.3+ with libraries below
-	* numpy
-	* discord.py
-	* tensorflow
-	* selenium
-	* beautifulsoup4
-	* aiohttp
+* Java 11.0.4+
 * Firefox
 * [geckodriver](https://github.com/mozilla/geckodriver/releases)
 ## Setup
