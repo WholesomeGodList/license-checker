@@ -29,12 +29,17 @@ async def process_site(site, author, title, channel):
 		matches = list()
 		similar = list()
 		titles = await site.get_manga_by_author(author)
+		print("titles from author found")
+		print(titles)
 		for t in titles:
-			s = compute_similarity(title, t)
+			print(f"computing similarity for {t}")
+			s = await compute_similarity(title, t)
+			print(s)
 			if s > .9:
 				matches.append(t)
 			elif s > .5:
 				similar.append(t)
+		print("done with computing similarity")
 		status = ("No match found"
 				if len(matches) == 0 and len(similar) == 0 else "")
 		if len(matches) != 0:

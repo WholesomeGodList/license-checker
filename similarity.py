@@ -19,7 +19,7 @@ session = tf.Session()
 session.run(tf.global_variables_initializer())
 session.run(tf.tables_initializer())
 
-def compute_similarity(title1, title2):
+async def compute_similarity(title1, title2):
 	vecs = session.run(embed([title1, title2]))
 	arrs = [np.array(vecs[i]) for i in (0, 1)]
 	return np.inner(arrs[0], arrs[1])
