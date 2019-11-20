@@ -17,7 +17,7 @@ Checks if a particular manga is licensed in English by looking it up on a given 
 * Execute `python3.7 similarity.py` to download/cache the tensorflow module
 * Create bot-token.txt and put your token in there
 ## Running
-* Execute `python3.7 main.py`
+* Run the `gradlew` executable with one command line argument `run`
 * Give the Discord bot commands of the form `.lc "author" "title"` or `.lc -a author -t title`
 ## Sites and status
 * [2DMarket](http://2d-market.com/): Works in progress. Requires site login to search.
