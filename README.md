@@ -6,8 +6,8 @@ Checks if a particular manga is licensed in English by looking it up on a given 
 	* discord.py
 	* tensorflow
 	* selenium
-	* requests (should come with discord.py)
 	* beautifulsoup4
+	* aiohttp
 * Firefox
 * [geckodriver](https://github.com/mozilla/geckodriver/releases)
 ## Setup
