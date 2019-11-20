@@ -12,9 +12,5 @@ public class JUnitTests {
     public void testHello() {
         System.out.println("hello");
     }
-
-    @Test
-    public void testFailure() {
-        fail("mmm");
-    }
 }
+
