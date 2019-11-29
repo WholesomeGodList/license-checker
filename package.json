@@ -1,0 +1,19 @@
+{
+  "name": "license-checker",
+  "version": "1.0.0",
+  "description": "Checks if a particular manga is licensed in English by looking it up on a given set of sites. The user interface is a Discord bot.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanlee515/license-checker.git"
+  },
+  "author": "Ethan Lee",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ethanlee515/license-checker/issues"
+  },
+  "homepage": "https://github.com/ethanlee515/license-checker#readme"
+}
