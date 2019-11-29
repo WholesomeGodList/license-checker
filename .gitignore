@@ -1,5 +1,9 @@
 bot-token.txt
 
+# Ignoring TypeScript generated files
+*.js
+*.map
+
 # Created by https://www.gitignore.io/api/vim,node
 # Edit at https://www.gitignore.io/?templates=vim,node
 
