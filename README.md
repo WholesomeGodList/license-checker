@@ -1,17 +1,18 @@
 # license-checker
 Checks if a particular manga is licensed in English by looking it up on a given set of sites. The user interface is a Discord bot.
 ## Dependencies
-* Java 11.0.4+
+* nodejs >= 10.0.0
+* npm
+* TypeScript
 * Firefox
 * [geckodriver](https://github.com/mozilla/geckodriver/releases)
 ## Setup
-* Modify the top of `similarity.py` depending on your tensorflow version.
-	* To find out the version number, do `python3.7 -c "import tensorflow;print(tensorflow.__version__)"`
-	* Pip3.7+ should download 2.0+ by default.
-* Execute `python3.7 similarity.py` to download/cache the tensorflow module
 * Create bot-token.txt and put your token in there
+* Run `npm install`
+	* Ignore any warnings about unmet peer dependencies, as they're all optional.
+* Run `tsc main.ts`
 ## Running
-* Run the `gradlew` executable with one command line argument `run`
+* Run `nodejs main.js`
 * Give the Discord bot commands of the form `.lc "author" "title"` or `.lc -a author -t title`
 ## Sites and status
 * [2DMarket](http://2d-market.com/): Works in progress. Requires site login to search.

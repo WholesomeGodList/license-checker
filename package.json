@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ethanlee515/license-checker/issues"
   },
-  "homepage": "https://github.com/ethanlee515/license-checker#readme"
+  "homepage": "https://github.com/ethanlee515/license-checker#readme",
+  "dependencies": {
+    "@types/node": "^12.12.14",
+    "discord.js": "github:discordjs/discord.js"
+  }
 }
