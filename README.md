@@ -11,12 +11,12 @@ Checks if a particular manga is licensed in English by looking it up on a given 
 * Download the tensorflow model
 	* install *tensorflowjs* through pip
 	* run the following command  
-	```
-	tensorflowjs_converter \
-		-input_format=tf_hub \
-		'https://tfhub.dev/google/imagenet/mobilenet_v1_100_224/classification/1' \
-		/mobilenet/web_model
-	```
+		```
+		tensorflowjs_converter \
+			-input_format=tf_hub \
+			'https://tfhub.dev/google/imagenet/mobilenet_v1_100_224/classification/1' \
+			/mobilenet/web_model
+		```
 * Run `npm install`
 	* Ignore any warnings about unmet peer dependencies, as they're all optional.
 * Run `tsc`
