@@ -22,7 +22,7 @@ client.on('message', msg => {
 		author = match1[1];
 		title = match1[2];
 	} else if(match2)
-		for(let i = 1; i <= 3; ++i) {
+		for(let i of [1, 3]) {
 			if(match2[i] == 'a')
 				author = match2[i+1];
 			else if(match2[i] == 't')
@@ -32,11 +32,8 @@ client.on('message', msg => {
 		msg.reply('invalid command. ' +
 			'Usage: `.lc "author" "title"` or `.lc -a author -t title`');
 		return;
-	}
-	console.log(author);
-	console.log(author.length);
-	console.log(title);
-	console.log(title.length);
+	}	
+
 });
 
 client.login(bot_token);
