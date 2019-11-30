@@ -15,7 +15,7 @@ Checks if a particular manga is licensed in English by looking it up on a given 
 		tensorflowjs_converter \
 			-input_format=tf_hub \
 			'https://tfhub.dev/google/universal-sentence-encoder/3' \
-			/tensorflow_models
+			tensorflow_model
 		```
 * Run `npm install`
 	* Ignore any warnings about unmet peer dependencies, as they're all optional.
