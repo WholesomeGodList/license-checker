@@ -13,7 +13,7 @@ Checks if a particular manga is licensed in English by looking it up on a given 
 	* run the following command  
 		```
 		tensorflowjs_converter \
-			-input_format=tf_hub \
+			--input_format=tf_hub \
 			'https://tfhub.dev/google/universal-sentence-encoder/3' \
 			tensorflow_model
 		```
