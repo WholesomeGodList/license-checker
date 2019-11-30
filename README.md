@@ -11,7 +11,7 @@ Checks if a particular manga is licensed in English by looking it up on a given 
 * Create bot-token.txt and put your token in there
 * Run `npm install`
 	* Ignore any warnings about unmet peer dependencies, as they're all optional.
-* Run `tsc main.ts`
+* Run `tsc`
 ## Running
 * Run `nodejs main.js`
 * Give the Discord bot commands of the form `.lc "author" "title"` or `.lc -a author -t title`
