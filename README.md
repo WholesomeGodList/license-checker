@@ -3,6 +3,7 @@ Checks if a particular manga is licensed in English by looking it up on a given 
 ## Dependencies
 * nodejs >= 10.0.0
 * npm
+* TensorFlow
 * TypeScript
 * Firefox
 * [geckodriver](https://github.com/mozilla/geckodriver/releases)

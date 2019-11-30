@@ -8,7 +8,7 @@ const bot_token : string = fs.readFileSync('bot-token.txt', 'utf8').trim();
 
 interface site {
 	name: string;
-	getMangaByAuthor: (string) => Promise<string[]>;
+	getMangaByAuthor: (author: string) => Promise<string[]>;
 }
 
 let sites : site[] = [
