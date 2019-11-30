@@ -1,5 +1,5 @@
 export default
-async function getMangaByAuthor(author: string) : Promise<string[]> {
+async function getManga(author: string) : Promise<string[]> {
 	throw Error("Not yet implemented");
 }
 
@@ -8,5 +8,5 @@ if(require.main == module) {
 		console.error('usage: nodejs projectHentai "author name"');
 		process.exit(1);
 	}
-	getMangaByAuthor(process.argv[1]).catch(e => console.error(e));
+	getManga(process.argv[1]).catch(e => console.error(e));
 }

@@ -1,7 +1,21 @@
 import * as fs from 'fs';
 import * as Discord from 'discord.js';
+import fromFakku from './fakku'
+import from2DMarket from './2DMarket'
+import fromProjectHentai from './projectHentai'
 const client = new Discord.Client();
 const bot_token : string = fs.readFileSync('bot-token.txt', 'utf8').trim();
+
+interface site {
+	name: string;
+	getMangaByAuthor: (string) => Promise<string[]>;
+}
+
+let sites : site[] = [
+	{name: 'Fakku', getMangaByAuthor: fromFakku},
+	{name: '2D Market', getMangaByAuthor: from2DMarket},
+	{name: 'Project Hentai', getMangaByAuthor: fromProjectHentai}
+];
 
 client.on('ready', () => {
 	console.log("bot running");
