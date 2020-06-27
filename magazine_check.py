@@ -96,7 +96,7 @@ async def process_site(link):
 		resp = await session.get(link)
 		page = await resp.text()
 		soup = BeautifulSoup(page, 'html.parser')
-		titles = soup.find_all('h1')
+		titles = soup.find_all('h1', class_="title")
 
 		tag_extractor = re.compile(r"/tag/(.*)/")
 		link_pile = soup.find_all('a', href=tag_extractor)
@@ -106,7 +106,7 @@ async def process_site(link):
 			tag_match = re.match(tag_extractor, taglink["href"])
 			tags.append(tag_match.group(1).replace("-", " "))
 
-		return titles[0].string, tags
+		return titles[0].get_text(), tags
 
 
 async def get_title_japanese(link):
@@ -123,9 +123,9 @@ async def get_title_japanese(link):
 		resp = await session.get(link)
 		page = await resp.text()
 		soup = BeautifulSoup(page, 'html.parser')
-		titles = soup.find_all('h2')
+		titles = soup.find_all('h2', class_="title")
 
-		title_japanese = str(titles[0])
+		title_japanese = titles[0].get_text()
 
 		pattern_extractor = re.compile(r"^(?:\s*(?:=.*?=|<.*?>|\[.*?]|\(.*?\)|\{.*?})\s*)*(?:[^[|\](){}<>]*\s*\|\s*)?([^\[|\](){}<>]*?)(\s*(?:=.*?=|<.*?>|\[.*?]|\(.*?\)|\{.*?})\s*)*$")
 		match = re.match(pattern_extractor, title_japanese.strip())
